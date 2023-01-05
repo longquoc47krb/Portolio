@@ -1,8 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
+import introPicture from "./assets/intro.png";
 import "./App.css";
+import "./styles/global.scss";
 import Title from "./components/Title";
 import ChemicalElement from "./components/ChemicalElement";
+import { motion } from "framer-motion";
 
 function App() {
   return (
@@ -10,21 +12,11 @@ function App() {
       <header className="App-header">
         <Title>
           Welcome to the{" "}
-          <ChemicalElement symbol="Br" atomicBlock={35} fontSize="2xl" />
-          eaking Bad
+          <ChemicalElement symbol="Br" atomicBlock={35} fontSize="4xl" />
+          eaking <ChemicalElement symbol="b" atomicBlock={56} fontSize="4xl" />
+          ad
         </Title>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={introPicture} className="intro-picture" alt="intro" />
       </header>
     </div>
   );

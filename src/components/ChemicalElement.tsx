@@ -13,10 +13,10 @@ function ChemicalElement({
 }: ChemicalElementProps) {
   return (
     <div
-      className={`inline-block text-white aspect-square p-2 w-12 h-12 leading-[60px] bg-[#1b370f] border-[3px] border-solid border-white font-bold text-center tracking-tight  cursor-pointer relative bg-gradient-to-r from-[#1b370f] to-[#53af6c] capitalize text-${fontSize}`}
+      className={`inline-block text-white p-2 aspect-square h-14 w-14 bg-[#1b370f] border-[3px] border-solid border-white font-bold text-center  cursor-pointer relative bg-gradient-to-r from-[#1b370f] to-[#53af6c] capitalize text-${fontSize}`}
     >
       {symbol}
-      <span className="text-[8px] absolute leading-[10px] text-right">
+      <span className="text-[8px] absolute leading-[10px] text-right top-1 right-1">
         {atomicBlock}
       </span>
     </div>
