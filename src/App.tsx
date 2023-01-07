@@ -5,6 +5,7 @@ import "./styles/global.scss";
 import Title from "./components/Title";
 import ChemicalElement from "./components/ChemicalElement";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import MenuItem from "./components/MenuItem";
 
 function App() {
   return (
@@ -16,14 +17,21 @@ function App() {
           eaking <ChemicalElement symbol="ba" atomicBlock={56} fontSize="4xl" />
           d
         </Title>
-        <motion.img
-          src={introPicture}
-          className="intro-picture"
-          alt="intro"
-          initial={{ x: 0, y: 200 }}
-          animate={{ x: -300, y: 0 }}
-          transition={{ ease: "easeOut", duration: 4 }}
-        />
+        <div className="flex justify-center">
+          <motion.img
+            src={introPicture}
+            className="intro-picture"
+            alt="intro"
+            animate={{ x: -300, y: 0 }}
+            transition={{ ease: "easeOut", duration: 4 }}
+          />
+          <div className="grid grid-cols-2 gap-2">
+            {" "}
+            {[1, 2, 3, 4].map((item: any) => {
+              return <MenuItem />;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
