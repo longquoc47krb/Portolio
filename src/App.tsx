@@ -25,12 +25,6 @@ function App() {
             animate={{ x: -300, y: 0 }}
             transition={{ ease: "easeOut", duration: 4 }}
           />
-          <div className="grid grid-cols-2 gap-2">
-            {" "}
-            {[1, 2, 3, 4].map((item: any) => {
-              return <MenuItem />;
-            })}
-          </div>
         </div>
       </div>
     </div>
